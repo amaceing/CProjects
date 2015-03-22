@@ -45,5 +45,5 @@ void stock::show() {
     std::cout << "Company: " << company << '\n'
                 << "Shares: " << shares << '\n'
                 << "Share Price: $" << share_val << '\n'
-                << "Total Worth: $" << total_val << '\n';
+                << "Total Worth: $" << total_val << '\n' << '\n';
 }
