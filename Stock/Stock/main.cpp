@@ -7,9 +7,12 @@
 //
 
 #include <iostream>
+#include "stock.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    stock test;
+    test.acquire("Mace", 20, 10);
+    test.show();
     return 0;
 }
