@@ -38,16 +38,15 @@ void insertionSort(std::vector<int> &nums) {
     for (int i = 1; i < nums.size(); i++) {
         int key = nums[i];
         int j = i - 1;
-        while (j >= 0 && key < nums[j]) {
-            int temp = nums[j];
-            nums[j] = key;
-            nums[i] = temp;
+        while (j >= 0 && nums[j] > key) {
+            nums[j + 1] = nums[j];
             j -= 1;
         }
+        nums[j + 1] = key;
         
     }
     
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < nums.size(); i++) {
         std::cout << nums[i];
     }
 }
