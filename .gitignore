@@ -1,3 +1,6 @@
 *.xcuserstate
 *.xcbkptlist
 *.xccheckout
+*.iml
+*.name
+*.xml
