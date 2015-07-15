@@ -78,7 +78,7 @@ void reverseInsertionSort(std::vector<int> &nums) {
 
 void bubbleSort(std::vector<int> nums) {
     //Bubble sort
-    for (int i = nums.size(); i > 0; i--) {
+    for (int i = (int)nums.size(); i > 0; i--) {
         int j = 0;
         while (j < nums.size() - 1 && nums[j + 1] < nums[j]) {
             int temp = nums[j];
