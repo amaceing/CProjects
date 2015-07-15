@@ -18,12 +18,12 @@ int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
     
     std::vector<int> nums;
-    nums.push_back(0);
-    nums.push_back(1);
-    nums.push_back(2);
-    nums.push_back(3);
-    nums.push_back(4);
     nums.push_back(5);
+    nums.push_back(4);
+    nums.push_back(3);
+    nums.push_back(2);
+    nums.push_back(1);
+    nums.push_back(0);
     
 //    nums.push_back(6);
 //    nums.push_back(5);
@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
     }
     std::cout << "\n";
     
-    reverseInsertionSort(nums);
+    bubbleSort(nums);
     
     return 0;
 }
@@ -78,4 +78,13 @@ void reverseInsertionSort(std::vector<int> &nums) {
 
 void bubbleSort(std::vector<int> nums) {
     //Bubble sort
+    for (int i = 0; i < nums.size(); i++) {
+        int key = nums[i];
+        int j = i + 1;
+        while (j < nums.size() && key > nums[j]) {
+            int temp = nums[j];
+            nums[j] = key;
+            nums[i] = temp;
+        }
+    }
 }
