@@ -92,3 +92,7 @@ void bubbleSort(std::vector<int> nums) {
         std::cout << nums[i];
     }
 }
+
+void reverseBubbleSort(std::vector<int> nums) {
+    //reverse bubble sort
+}
