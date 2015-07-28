@@ -12,6 +12,7 @@
 void insertionSort(std::vector<int> &nums);
 void reverseInsertionSort(std::vector<int> &nums);
 void bubbleSort(std::vector<int> nums);
+void reverseBubbleSort(std::vector<int> nums);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
