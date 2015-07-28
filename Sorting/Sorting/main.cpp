@@ -19,12 +19,12 @@ int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
     
     std::vector<int> nums;
-    nums.push_back(5);
-    nums.push_back(4);
-    nums.push_back(3);
-    nums.push_back(2);
-    nums.push_back(1);
     nums.push_back(0);
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    nums.push_back(5);
     
 //    nums.push_back(6);
 //    nums.push_back(5);
@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
     }
     std::cout << "\n";
     
-    bubbleSort(nums);
+    reverseBubbleSort(nums);
     
     return 0;
 }
@@ -88,6 +88,7 @@ void bubbleSort(std::vector<int> nums) {
             j++;
         }
     }
+    
     for (int i = 0; i < nums.size(); i++) {
         std::cout << nums[i];
     }
@@ -95,4 +96,17 @@ void bubbleSort(std::vector<int> nums) {
 
 void reverseBubbleSort(std::vector<int> nums) {
     //reverse bubble sort
+    for (int i = (int)nums.size(); i > 0; i--) {
+        int j = 0;
+        while (j < nums.size() - 1 && nums[j + 1] > nums[j]) {
+            int temp = nums[j];
+            nums[j] = nums[j + 1];
+            nums[j + 1] = temp;
+            j++;
+        }
+    }
+    
+    for (int i = 0; i < nums.size(); i++) {
+        std::cout << nums[i];
+    }
 }
